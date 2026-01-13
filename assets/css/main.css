@@ -2423,16 +2423,32 @@ body.is-touch .main {
   transform: translateY(100%);
 }
 
-@media screen and (max-width: 736px) {
-  #contact .box {
-    padding: 1.5em 1.5em 2em 1.5em;
-  }
+.whatsapp-float i {
+  font-family: "Font Awesome 6 Brands" !important;
+  font-weight: 400;
 }
 
-@media screen and (max-width: 480px) {
-  #contact .box {
-    padding: 1em 1em 2em 1em;
-  }
+/* icones de redes sociais rodapé */
+
+/* Aumenta o tamanho dos ícones específicos */
+#footer .icons a.fa-instagram,
+#footer .icons a.fa-youtube {
+  font-size: 1.5em; /* Ajuste este valor (ex: 1.5em, 2.5em) conforme o gosto */
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+/* Efeito opcional: aumenta levemente ao passar o mouse */
+#footer .icons a.fa-instagram:hover,
+#footer .icons a.fa-youtube:hover {
+  transform: scale(1.2);
+}
+
+/* Remove a borda inferior que o template costuma colocar em links */
+#footer .icons a {
+  border-bottom: none !important;
+  text-decoration: none !important;
 }
 
 /* WhatsApp Float */
@@ -2464,6 +2480,18 @@ body.is-touch .main {
   color: #fff !important;
 }
 
+@media screen and (max-width: 736px) {
+  #contact .box {
+    padding: 1.5em 1.5em 2em 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #contact .box {
+    padding: 1em 1em 2em 1em;
+  }
+}
+
 /* Ajuste para mobile para não cobrir conteúdo importante */
 @media screen and (max-width: 736px) {
   .whatsapp-float {
@@ -2473,32 +2501,35 @@ body.is-touch .main {
     right: 20px;
     font-size: 25px;
   }
-}
 
-.whatsapp-float i {
-  font-family: "Font Awesome 6 Brands" !important;
-  font-weight: 400;
-}
+  @media screen and (max-width: 736px) {
+    #intro {
+      height: 50hv;
+      min-height: 400px;
+    }
 
-/* icones de redes sociais rodapé */
+    /* Move o conteúdo para o topo sem quebrar o template */
+    #intro .content {
+      top: 20%;
+      transform: translateY(0);
+      text-align: center;
+    }
 
-/* Aumenta o tamanho dos ícones específicos */
-#footer .icons a.fa-instagram,
-#footer .icons a.fa-youtube {
-  font-size: 1.5em; /* Ajuste este valor (ex: 1.5em, 2.5em) conforme o gosto */
-  display: inline-block;
-  vertical-align: middle;
-  transition: transform 0.2s ease;
-}
+    #intro .content p {
+      max-width: 22em;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-/* Efeito opcional: aumenta levemente ao passar o mouse */
-#footer .icons a.fa-instagram:hover,
-#footer .icons a.fa-youtube:hover {
-  transform: scale(1.2);
-}
+    #intro .button.down {
+      width: 3em;
+      height: 3em;
+      line-height: 3em;
+      background-size: 1.2em;
+    }
 
-/* Remove a borda inferior que o template costuma colocar em links */
-#footer .icons a {
-  border-bottom: none !important;
-  text-decoration: none !important;
+    #intro footer {
+      margin-top: 1em;
+    }
+  }
 }
